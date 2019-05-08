@@ -1,0 +1,13 @@
+.preview-img {
+  width: 4.5vw;
+  height: 130px;
+  z-index: 9999;
+  position: absolute;
+  top: 36%;
+  left: 39.55%;
+  transform: rotate(-4deg)
+}
+
+code {
+  margin: 10px;
+}
