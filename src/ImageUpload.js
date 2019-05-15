@@ -6,6 +6,7 @@ class ImageUpload extends React.Component {
     this.state = {
       file: '',
       imagePreviewUrl: '',
+      is: false,
     }
   }
 
@@ -23,6 +24,7 @@ class ImageUpload extends React.Component {
         imagePreviewUrl: reader.result
       }, () => {
         getPreviewUrl(this.state.imagePreviewUrl)
+        document.getElementById('uploadfile').remove()
       })
     }
     reader.readAsDataURL(file)
@@ -30,12 +32,15 @@ class ImageUpload extends React.Component {
 
 
   render() {
+    const { is } = this.state
     return (
       <div
         style={{ zIndex: '9999' }}
       >
         <input type="file"
+          id="uploadfile"
           onChange={e => this._handleImageChange(e)}
+          disabled={is}
         />
       </div>
     )

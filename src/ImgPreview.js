@@ -7,8 +7,7 @@ const ImgPreview = (data) => {
     (<img className="preview-img"
       src={imagePreviewUrl}
       alt="preview"
-    />) :
-    (<code>Select Image</code>)
+    />) : null
   return result
 }
 
